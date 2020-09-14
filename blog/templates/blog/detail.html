@@ -1,16 +1,17 @@
 {% extends 'base.html' %} {% block content %}
-<div class="detail">
+<div class="detail" id="content">
   <h3>{{blog.title}}</h3>
   <p>{{blog.body}}</p>
   <p class="date">{{blog.date | date:"Y년 n월 j일 G시 i분"}}</p>
   <div class="btn">
-    <a href="{% url 'update' blog.pk %}">수정</a>
-    <a href="{% url 'delete' blog.pk %}">삭제</a>
+    <a id="edit" href="{% url 'update' blog.pk %}">수정</a>
+    <a id="delete" href="{% url 'delete' blog.pk %}">삭제</a>
   </div>
 </div>
 
 <hr/>
-<h3>댓글창</h3>
+<h3>Comments</h3>
+<div class="comments">
 {% for comment in blog.comments.all %}
 <div class="detail">
   <strong>{{comment.body}}</strong>
@@ -20,11 +21,10 @@
     <a href="{% url 'comment_delete' comment.pk %}">삭제</a>
   </div>
 </div>
-<hr/>
 {% empty %}
 <p>댓글이 없습니다</p>
 {% endfor %}
-
+</div>
 <form action="" method="POST">
   {% csrf_token %} {{comment_form.as_p}}
   <input type="submit" value="등록"/>

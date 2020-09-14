@@ -1,16 +1,17 @@
 @import "reset.css";
 /* FONT */
-@font-face {
+/* @font-face {
   font-family: "CookieRunOTF-Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Inconsolata:wght@500&display=swap');
 
 .notosanskr * {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 html,
@@ -22,8 +23,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Noto Sans KR", sans-serif;
-  background-color: #ebf0f1;
+  font-family: 'Inconsolata', monospace;
+  background-color: #C3B8D9;
 }
 
 /* header */
@@ -33,7 +34,7 @@ header {
   flex-direction: row;
   width: 100%;
   height: 10%;
-  background-color: #092e20;
+  background-color: #394D73;
   color: white;
 }
 
@@ -41,7 +42,7 @@ header h1 {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  font-family: "CookieRunOTF-Bold";
+  font-family: 'Fjalla One', sans-serif;
 }
 header a {
   all: unset;
@@ -62,7 +63,7 @@ section {
 /* footer */
 
 footer {
-  background-color: #44b78b;
+  background-color: #7883BF;
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,7 +78,7 @@ footer p {
 /* 공통 요소 */
 
 h3 {
-  color: #0c4b33;
+  color: #394D73;
   font-size: 2rem;
 }
 
@@ -91,10 +92,13 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px dashed #092e20;
-  margin: 1em 1em;
+  border: 3px solid #394D73;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 70%;
+  background-color: white;
 }
-
 .home p {
   flex-basis: auto;
   word-break: break-all;
@@ -102,7 +106,7 @@ h3 {
 }
 .home a {
   all: unset;
-  color: #0c4b33;
+  color: #394D73;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -127,13 +131,13 @@ h3 {
 #id_title {
   font-size: 20px;
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 #id_body {
   font-size: 15px;
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 /* detail.html */
@@ -142,6 +146,19 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+
+}
+#content{
+  background-color: white;
+  border: 3px solid #394D73;
+}
+.comments{
+  background-color: white;
+  border: 3px solid #394D73;
 }
 .btn {
   display: flex;
@@ -156,13 +173,17 @@ h3 {
   font-weight: bolder;
 }
 .btn a:hover {
-  color: #44b78b;
+  color: #7883BF;
 }
 
 .detail p {
   margin: 1em;
   word-break: break-all;
 }
+hr{
+  color: #7883BF;
+}
+
 
 /* create.html update.html */
 form {
@@ -173,14 +194,22 @@ form {
 
 input {
   background-color: white;
-  color: #44b78b;
-  border: 1px solid #44b78b;
+  color: #7883BF;
+  border: 1px solid #7883BF;
   border-radius: 5px;
   font-size: 12pt;
 }
 
 input:hover {
-  background-color: #44b78b;
+  background-color: #7883BF;
   color: white;
-  border: 1px solid #44b78b;
+  border: 1px solid #7883BF;
+}
+#edit{
+  color: #D99559;
+  font-size: 12pt;
+}
+#delete{
+  color: #BF5A5A;
+  font-size: 12pt;
 }
