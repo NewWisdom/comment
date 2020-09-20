@@ -44,6 +44,14 @@ header h1 {
   margin: 10px;
   font-family: 'Fjalla One', sans-serif;
 }
+header h2 {
+  display: inline-block;
+  align-content: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
 header a {
   all: unset;
   color: white;
@@ -51,7 +59,7 @@ header a {
 }
 
 header .dslion {
-  margin-left: auto;
+  margin-left: auto; 
   width: 50px;
   margin-right: 1em;
 }
@@ -213,3 +221,4 @@ input:hover {
   color: #BF5A5A;
   font-size: 12pt;
 }
+
