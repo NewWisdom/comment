@@ -222,3 +222,14 @@ input:hover {
   font-size: 12pt;
 }
 
+.naver {
+  color: #394D73;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.naver_h2 {
+
+  align-items: center;
+
+}

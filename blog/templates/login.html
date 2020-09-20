@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-{% comment %} {%load socialaccount %}
-{%providers_media_js%} {% endcomment %}
+{%load socialaccount %}
+{%providers_media_js%}
 <h1 class="title">Login</h1>
 
 <form method="POST" action="{%url 'login'%}">
@@ -15,6 +15,7 @@
     <br>
     <br>
     <input type="submit" value="Login">
+    <h2 class="naver_h2"><a class="naver" href="{% provider_login_url 'naver' %}">네이버로 로그인 하기</a></h2>
 </form>
-{% comment %} <h1><a href="{% provider_login_url 'naver' %}">네이버로 로그인 하기</a></h1> {% endcomment %}
+
 {% endblock %}
