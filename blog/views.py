@@ -95,8 +95,10 @@ def login(request):
     return render(request,'login.html')
 
 def logout(request):
-    print("hey!!!!")
     if request.method == 'POST':
         auth.logout(request)
         return redirect('home')
     return redirect('home')
+
+def map(request):
+    return render(request, 'blog/show.html')
